@@ -1,4 +1,5 @@
 import random
+from ludek import display_hangman
 
 def get_word():
     animals = ['cat', 'dog', 'bird']
@@ -20,7 +21,7 @@ def game(word):
     guessed = False
     guessed_letters = []
     word_progress = '_' * len(word)
-    tries = 5
+    tries = 6
 
 
 #    print(type(guessed_letters))
@@ -60,7 +61,7 @@ def game(word):
                 word_progress = word
         else:
             print('Wrong input')
-
+        print(display_hangman(tries))
         print(word_progress)
 
 
