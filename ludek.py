@@ -1,5 +1,7 @@
+from termcolor import colored
+
 def display_hangman(tries):
-    stages = [
+    stages = [colored(
                 """
                        ┌--------┐
                        |        |
@@ -8,7 +10,7 @@ def display_hangman(tries):
                        |       ┌┴┐
                        |     You lost
                     ___|___ 
-                """,
+                """, 'red'),
                 """
                        ┌--------┐
                        |        |
@@ -54,5 +56,14 @@ def display_hangman(tries):
                        |     
                     ___|___ 
                 """,
+                """
+                       
+                             
+                              
+                             
+                             
+                            
+                    ___|___ 
+                """
     ]
     return stages[tries]
