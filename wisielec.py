@@ -6,7 +6,7 @@ def get_word():
     fruit = ['orange', 'banana', 'apple']
     word_animals = random.choice(animals)
     word_fruit = random.choice(fruit)
-    question_type = int(input('0 = animals, 1 = fruit: '))
+    question_type = int(input('Choose category: 0 = animals, 1 = fruit: '))
 
     if question_type == 0:
         word = word_animals
@@ -22,12 +22,9 @@ def game(word):
     guessed_letters = []
     word_progress = '_' * len(word)
     tries = 6
-#    print(type(guessed_letters))
-#    print(type(guessed_words))
-#    print(type(word))
+
     print('--------------Start--------------')
     print(f'Word to guess: {word_progress}')
-
 
     while not guessed and tries > 0:
         guess = input('Input a guess: ').lower()
@@ -70,7 +67,6 @@ def game(word):
                 if guess not in guessed_letters:
                     guessed_letters += guess
                     print(f'Guessed letters: {guessed_letters}')
-
             else:
                 guessed = True
                 word_progress = word
