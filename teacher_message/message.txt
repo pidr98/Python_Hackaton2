@@ -1,0 +1,11 @@
+------Welcome {} | {} {}------
+
+This is a kindly reminder that you have
+{} tasks left to submit
+before you can graduate.
+
+Your current grade is {}
+and can increase to {}
+if you submit all assignments before the due date
+25.06.2022.
+---------------------------------------------------
