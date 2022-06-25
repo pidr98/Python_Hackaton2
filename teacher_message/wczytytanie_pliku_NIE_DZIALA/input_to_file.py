@@ -17,9 +17,20 @@ def inputs():
             'grade': grades
         }
     ]
-    with open('data.csv', 'w', encoding='UTF8', newline='') as f:
+    with open('data.csv', 'w', encoding='UTF8') as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
         writer.writerows(rows)
 
     return classes, names, surnames, tasks, grades
+
+def content():
+    contentt = []
+    csvfile = open('data.csv', 'r')
+    reader = csv.reader(csvfile)
+    headers = next(reader)
+    for row in reader:
+        row_data = {key: value for key, value in zip(headers, row)}
+        contentt.append(row_data)
+    csvfile.close()
+    return contentt

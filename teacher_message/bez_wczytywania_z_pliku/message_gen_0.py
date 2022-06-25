@@ -1,4 +1,4 @@
-from input_to_file import inputs
+from input_to_file_0 import inputs
 
 
 def main():
